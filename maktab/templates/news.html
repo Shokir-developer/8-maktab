@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+		<div class="col-6">
+			<h3>Maktab yangiliklari</h3>
+			<hr>
+      
+			<div class="card mb-3">
+  				<div class="card-body">
+    				<h5 class="card-title">{{news.title}}</h5>
+            <img class="img-fluid center" src="{{news.image.url}}" alt="">
+    				<p class="card-text">{{news.body}}</p>
+   					 <p class="card-text"><small class="text-muted">Last updated {{news.date}}</small></p>
+  				</div>
+			</div>
+
+		</div>
+
+{% endblock content %}	

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+		<div class="col-6">
+			<h3>Maktab yangiliklari</h3>
+			<hr>
+      {% for new in news %}
+			<div class="card mb-3">
+  				<div class="card-body">
+    				<h5 class="card-title"><a href="{% url 'newId' new.pk %}">{{new.title}}</a></h5>
+    				<p class="card-text">{{new.body|slice:'100'}}...</p>
+   					 <p class="card-text"><small class="text-muted">Last updated {{new.date}}</small></p>
+  				</div>
+			</div>
+      {% endfor %}
+
+		</div>
+
+{% endblock content %}	

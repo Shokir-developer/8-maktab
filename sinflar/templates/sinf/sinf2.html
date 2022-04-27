@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+		<div class="col-6">
+			<h3>2 - Sinf ro'yxati</h3>
+			<hr>
+			<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">Ism</th>
+				      <th scope="col">Familya</th>
+				      <th scope="col">Sharif</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	{% for pupil in pupils %}
+
+				    <tr>
+				      <th scope="row">{{pupil.id}}</th>
+				      <td><a style="font-size: 16px; color: black;" href="{% url 'sinf_2_Id' pupil.id %}">{{pupil.ism}}</a></td>
+				      <td>{{pupil.familya}}</td>
+				      <td>{{pupil.sharif}}</td>
+				    </tr>
+				    {% endfor %}
+				    
+				  </tbody>
+			</table>
+			
+		</div>
+{% endblock %}	
+
+		

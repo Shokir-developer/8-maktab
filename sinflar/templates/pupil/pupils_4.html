@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+		<div class="col-6">
+			<h3>Ma'lumot</h3>
+			<hr>
+			<div class="card-deck">
+			  <div class="card">
+			    <img class="card-img-top img-fluid center p-3 ma" src="{{pupil.image.url}}" alt="Card image cap">
+			    <div class="card-body">
+			        <h5 class="card-title">{{pupil.familya}} {{pupil.ism}} {{pupil.sharif}}</h5>
+			        <p class="card-text">{{pupil.info}}.</p>
+			    </div>
+			    
+			  </div>
+		 </div>
+
+		</div>
+{% endblock %}	
+	
